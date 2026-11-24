@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>for 米高</title>
+<meta name="description" content="來自PID的祝福">
+<meta name="theme-color" content="#6F806A">
+<meta property="og:title" content="A LITTLE JOURNEY · for 米高">
+<meta property="og:description" content="來自PID的祝福">
+<meta property="og:image" content="images/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Caveat:wght@500&family=DM+Mono:wght@400&family=Noto+Serif+TC:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- A · COVER -->
+<header class="cover" id="top">
+  <div class="cover__text">
+    <p class="kicker fade" style="--d:.1s">PID · TRAVEL JOURNAL · VOL. 01</p>
+    <h1 class="cover__title">
+      <span class="cover__a fade" style="--d:.3s">A LITTLE</span>
+      <span class="cover__j fade" style="--d:.5s">Journey</span>
+    </h1>
+    <p class="cover__for fade" style="--d:.8s">For Michael <span>(米高)</span></p>
+    <p class="cover__line fade" style="--d:1s">Thank you for being part of our journey.</p>
+    <a class="btn fade" style="--d:1.25s" href="#diary">OPEN THE JOURNAL <span aria-hidden="true">→</span></a>
+    <p class="cover__meta fade" style="--d:1.45s" id="coverMeta"></p>
+  </div>
+
+  <figure class="cover__photo fade" style="--d:.4s">
+    <div class="film"><img id="coverImg" alt=""></div>
+    <span class="tape tape--a" aria-hidden="true"></span>
+    <span class="tape tape--b" aria-hidden="true"></span>
+    <svg class="postmark cover__postmark" aria-hidden="true"><use href="#postmark"/></svg>
+    <figcaption class="hand">frame 00 · where the journey began</figcaption>
+  </figure>
+</header>
+
+<div class="route reveal" aria-hidden="true">
+  <svg viewBox="0 0 1200 90" preserveAspectRatio="none">
+    <path d="M10 60 C 200 10, 380 85, 600 45 S 1000 15, 1190 50" />
+  </svg>
+  <span class="route__dot" style="left:1%"></span>
+  <span class="route__dot route__dot--b" style="left:50%"></span>
+  <span class="route__dot route__dot--c" style="left:98.5%"></span>
+  <svg class="route__cam" viewBox="0 0 24 24"><use href="#i-camera"/></svg>
+</div>
+
+<!-- B · PHOTO DIARY -->
+<section class="section diary" id="diary">
+  <div class="head reveal">
+    <p class="kicker">02 — PHOTO DIARY</p>
+    <h2>Moments <em>along the way</em></h2>
+    <p class="head__zh">沿途收集的小時光</p>
+  </div>
+  <div class="diary__grid" id="diaryGrid"></div>
+</section>
+
+<!-- C · POSTCARDS -->
+<section class="section postcards" id="postcards">
+  <div class="head reveal">
+    <p class="kicker">03 — POSTCARDS</p>
+    <h2>POSTCARDS FROM YOUR <em>PID family</em></h2>
+    <p class="head__zh">大家想對你說</p>
+  </div>
+  <div class="pc-grid" id="pcGrid"></div>
+</section>
+
+<!-- D · THE NEXT ADVENTURE -->
+<section class="ending" id="next">
+  <p class="kicker kicker--light reveal">04 — THE NEXT ADVENTURE</p>
+  <div class="ending__scene reveal">
+    <svg class="ending__route" viewBox="0 0 600 120" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 110 C 140 110, 220 30, 360 60 S 540 20, 600 10"/>
+    </svg>
+    <div class="ending__frame"><img id="endingImg" alt=""></div>
+    <svg class="pet pet--cat" viewBox="0 0 60 72" aria-hidden="true"><use href="#i-cat"/></svg>
+    <svg class="pet pet--dog" viewBox="0 0 64 72" aria-hidden="true"><use href="#i-dog"/></svg>
+  </div>
+  <div class="ending__text reveal">
+    <p class="ending__big">The best moments are yet to come.</p>
+    <p class="ending__small">Wishing you many beautiful adventures ahead.</p>
+  </div>
+  <svg class="postmark ending__postmark reveal" aria-hidden="true"><use href="#postmark-end"/></svg>
+  <footer class="footer">
+    <a href="#top" class="footer__top">↑ BACK TO PAGE ONE</a>
+    <span>WITH LOVE · YOUR PID FAMILY</span>
+  </footer>
+</section>
+
+<!-- Lightbox -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="照片檢視" hidden>
+  <button class="lb__close" id="lbClose" aria-label="關閉">×</button>
+  <button class="lb__nav lb__prev" id="lbPrev" aria-label="上一張">‹</button>
+  <figure class="lb__fig">
+    <img id="lbImg" alt="">
+    <figcaption><span id="lbCount"></span><span class="hand" id="lbCap"></span></figcaption>
+  </figure>
+  <button class="lb__nav lb__next" id="lbNext" aria-label="下一張">›</button>
+</div>
+
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-camera" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 8h4l2-2.5h6L17 8h4v11H3z"/><circle cx="12" cy="13" r="3.6"/></g></symbol>
+    <symbol id="i-mountain" viewBox="0 0 24 24"><path d="M2 19 9 8l4 6 3-4 6 9z" fill="currentColor"/><circle cx="17" cy="6" r="2" fill="currentColor"/></symbol>
+    <symbol id="i-wave" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 11q2.5-3 5 0t5 0 5 0 5 0"/><path d="M2 16q2.5-3 5 0t5 0 5 0 5 0"/></g></symbol>
+    <symbol id="i-paw" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="7" cy="8" r="2"/><circle cx="12" cy="6" r="2"/><circle cx="17" cy="8" r="2"/><circle cx="4.5" cy="12.5" r="1.8"/><circle cx="19.5" cy="12.5" r="1.8"/><path d="M12 11c3 0 5.5 3.5 5.5 6 0 1.8-1.5 2.4-3 2-1-.3-1.6-.6-2.5-.6s-1.5.3-2.5.6c-1.5.4-3-.2-3-2 0-2.5 2.5-6 5.5-6z"/></g></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4" fill="currentColor"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.2 5.2 7 7M17 17l1.8 1.8M5.2 18.8 7 17M17 7l1.8-1.8"/></g></symbol>
+    <symbol id="i-cat" viewBox="0 0 60 72"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 26 19 12l7 8q4-1.2 8 0l7-8 2 14q1.5 10-13 11-14.5-1-13-11z"/><path d="M21 36q-10 14-6 30 15 4 30 0 4-16-6-30"/><path d="M45 64q12-1 11-14"/></g></symbol>
+    <symbol id="i-dog" viewBox="0 0 64 72"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 22q11-13 22 0 3 12-11 15-14-3-11-15z"/><path d="M22 21q-9 1-8 14 5-1 8-7M42 21q9 1 8 14-5-1-8-7"/><path d="M23 35q-11 15-7 31 16 4 32 0 4-16-7-31"/><path d="M17 62q-10-1-9-10"/></g></symbol>
+    <symbol id="postmark" viewBox="0 0 150 90"><g fill="none" stroke="currentColor"><circle cx="45" cy="45" r="36" stroke-width="2"/><circle cx="45" cy="45" r="28" stroke-width="1"/><path d="M86 30q8-6 16 0t16 0 16 0M86 45q8-6 16 0t16 0 16 0M86 60q8-6 16 0t16 0 16 0" stroke-width="1.6"/></g><g fill="currentColor" font-family="DM Mono, monospace" text-anchor="middle"><text x="45" y="42" font-size="13" letter-spacing="2">PID</text><text x="45" y="57" font-size="10" letter-spacing="1">2026</text></g></symbol>
+    <symbol id="postmark-end" viewBox="0 0 150 90"><g fill="none" stroke="currentColor"><circle cx="45" cy="45" r="36" stroke-width="2"/><circle cx="45" cy="45" r="28" stroke-width="1"/><path d="M86 30q8-6 16 0t16 0 16 0M86 45q8-6 16 0t16 0 16 0M86 60q8-6 16 0t16 0 16 0" stroke-width="1.6"/></g><g fill="currentColor" font-family="DM Mono, monospace" text-anchor="middle"><text x="45" y="41" font-size="9" letter-spacing="1.5">BON</text><text x="45" y="54" font-size="9" letter-spacing="1.5">VOYAGE</text></g></symbol>
+  </defs>
+</svg>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
