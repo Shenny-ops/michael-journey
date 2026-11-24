@@ -12,8 +12,6 @@ window.JOURNEY = {
   cover: { src: "images/photo-01.jpg", alt: "米高和 PID 同事在辦公室的自拍合照" },
 
   photos: [
-    { src: "images/photo-01.jpg", alt: "米高和 PID 同事在辦公室的自拍合照", caption: "a little memory" },
-    { note: "on the road with the PID crew" },
     { src: "images/photo-02.jpg", alt: "PID 同事們在會議室一起搞笑合照", caption: "say cheese!" },
     { note: "next stop: somewhere new", pets: true }
   ],

@@ -26,7 +26,7 @@
   $("coverImg").alt = J.cover.alt || "";
   const photos = J.photos.filter((p) => p.src);
   $("coverMeta").textContent =
-    `${J.postcards.length} POSTCARDS · ${photos.length} MOMENTS · COUNTLESS MILES`;
+    `${J.postcards.length} POSTCARDS · ${photos.length} ${photos.length === 1 ? "MOMENT" : "MOMENTS"} · COUNTLESS MILES`;
 
   /* ---------- photo diary ---------- */
   const tilts = [-1.2, 0.9, -0.5, 1.1, -0.8, 0.6];
